@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alt-Countdown</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		.body{
+			margin: 0;
+			padding:0;
+		}
+	</style>
+</head>
+<body bgcolor="black" style="margin: 0">
+
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<div align="center" style = "width: 100%">
+		<div align="center" style = "margin-bottom: 100px; width: 90%">
+			<script>
+				countDown1 = new CountDownObject(); //add countdown as object
+
+				countDown1.TIME_ZONE = +5.5, // your time zone (-12 ... +14)
+			
+				// Your date and time
+				countDown1.SET_YOUR_SEC = 0,
+				countDown1.SET_YOUR_MIN = 0,
+				countDown1.SET_YOUR_HOUR = 13,
+				countDown1.SET_YOUR_DAY = 01,
+				countDown1.SET_YOUR_MONTH = 01,
+				countDown1.SET_YOUR_YEAR = 2057,
+			
+				countDown1.NUM_OF_ELEMENTS = 6, // number of flip-elements(from 1 to 9)
+				countDown1.TIME_ANIMATION = 950, // time of flip animation in milliseconds(from 50 to 950)
+				countDown1.BACK_COLOR = "#f07000", // flip-element back color
+				countDown1.DIGITS_COLOR = "#f0d070", // digits color on flip-elements
+				countDown1.TEXT_COLOR = "#e0e0e0", // text color under flip elements(seconds, minutes and etc.)
+				countDown1.IS_DYNAMIC_COLOR = true, // back color will vary(true or false)
+
+				countDown1.CANVAS_NAME = "CountDownCanvas";  //canvas name in html-code
+
+				countDown1.Start(); //start countdown
+			</script>
+		</div>
+		<div align="center" style = "width: 100%">
+			<div style = "align: center; width: 50%; float: left;">
+				<div style = "width: 80%;" align="center">
+					<script>
+						//seccond timer
+						countDown2 = new CountDownObject();
+						
+						countDown2.TIME_ANIMATION = 950,
+						countDown2.BACK_COLOR = "#222222",
+						countDown2.DIGITS_COLOR = "#eeeeee",
+						countDown2.TEXT_COLOR = "#e0e0e0",
+						countDown2.IS_DYNAMIC_COLOR = false,
+
+						countDown2.CANVAS_NAME = "CountDownCanvas2";
+						countDown2.Start();
+					</script>
+				</div>
+			</div>
+			<div style = "align: center; width: 50%; float: left;">
+				<div style = "width: 80%;" align="center">
+					<script>
+						//third timer
+						countDown3 = new CountDownObject();
+						
+						countDown3.TIME_ANIMATION = 950,
+						countDown3.BACK_COLOR = "#eeeeee",
+						countDown3.DIGITS_COLOR = "#222222",
+						countDown3.TEXT_COLOR = "#e0e0e0",
+						countDown3.IS_DYNAMIC_COLOR = false,
+
+						countDown3.CANVAS_NAME = "CountDownCanvas3";
+						countDown3.Start();
+					</script>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
